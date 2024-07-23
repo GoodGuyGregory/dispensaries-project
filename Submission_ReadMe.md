@@ -2,8 +2,8 @@
 
 ### Submission Details
 
-For this project, I decided to focus on streamlining the process of parsing dispensary menus before visiting. The project conveniently includes a Menu attribute attached to each Document. However, wrapping a nested array of Product objects presented a challenge.
-Determined to overcome this, I built a custom backend to parse the "[]" string arrays of nested Product documents. This backend provides several endpoints that easily parse the data for requested products. The endpoints for all the custom API logic can be found in the attached Postman collection.
+For this project, I decided to focus on streamlining the process of parsing dispensary menus before visiting. The project conveniently includes a Menu attribute attached to each Document. However, parsing a nested array of Product objects within a backend for each dispensary presented a challenge.
+Determined to overcome this, I built a custom backend to parse the "[]" string arrays of nested Product documents. This backend provides several endpoints that easily parse the data for requested products. There is a filter and search by brand and category feature I also developed. The test endpoints for all the custom API logic can be found in the attached Postman collection.
 
 After parsing the backend for nested menu items, I addressed the common question: what should shoppers look for when visiting a dispensary, and what aspects often confuse the average customer?
 
