@@ -1,0 +1,14 @@
+.dispensaries-container {
+    margin: 25px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.dispensary-actions {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 35px;
+}

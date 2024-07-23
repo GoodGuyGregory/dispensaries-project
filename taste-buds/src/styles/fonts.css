@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'AkayaTelivigala';
+    src: url('../assets/fonts/Akaya_Telivigala/AkayaTelivigala-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Indie_Flower';
+    src: url('../assets/fonts/Indie_Flower/IndieFlower-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}

@@ -1,0 +1,44 @@
+@import "../../../styles/mixins";
+@import "../../../styles/variables";
+@import '../../../styles/fonts';
+
+h1, h2 {
+    font-size: 45px;
+    @include text-shadow
+}
+
+p {
+    @include text-shadow
+}
+
+.search-form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+    .search-form{
+        
+        align-items: center;
+        justify-content: space-around;
+        width: 50%;
+        background-color: $div-background-color;
+        border-radius: 10px;
+        border: solid #f3f3f3 1px;
+        padding: 40px;
+        max-height: 550px;
+
+        form{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+
+        
+        }
+
+        .actions {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+}

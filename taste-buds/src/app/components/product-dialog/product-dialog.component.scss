@@ -1,0 +1,56 @@
+@import "../../../styles/mixins";
+@import "../../../styles/variables";
+@import '../../../styles/fonts';
+
+mat-dialog-container {
+    background-color:  $div-background-color !important;
+}
+
+.product-container {
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+
+    .product-header {
+        img {
+            border-radius: 5%;
+            max-width: 75px;
+        }
+        h1 {
+            @include text-shadow;
+        }
+        h2 {
+            @include text-shadow;
+        }
+    }
+
+    .product-details {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        img {
+            border-radius: 5%;
+            max-width: 400px;
+            margin: 25px;
+            box-shadow: 5px 5px 10px #1df7c8;
+
+        }
+
+        .main-details {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+        
+            color: aquamarine
+            }
+        }
+
+        .description-details {
+            p {
+                color: aquamarine
+            }
+        }
+
+}

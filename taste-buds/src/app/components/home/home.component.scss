@@ -1,0 +1,30 @@
+@import "../../../styles/mixins";
+
+.hero-image {
+
+    
+    background-image: linear-gradient(rgba(0, 0, 255, 0.704), rgba(255, 225, 0, 0.5)),
+    url("../../../assets/mountain-scene.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    height: 100vh;
+
+
+    .home-container{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        padding-top: 5%;
+ 
+        .header-text {
+            font-size: 83px;
+            color: white;
+            text-shadow: rgb(115, 255, 0) 1px 0 10px;
+        }
+    }
+}
+
+
+

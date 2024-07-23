@@ -1,0 +1,43 @@
+@import "../../../styles/mixins";
+@import "../../../styles/variables";
+@import '../../../styles/fonts';
+
+.dispensary-container {
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+
+    .dispensary-header {
+        h1 {
+            @include text-shadow;
+        }
+        p {
+            color: aquamarine;
+        }
+    }
+    .dispensary-details {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+
+        .dispensary-image{
+            img {
+                max-width: 500px;
+                max-height: 420px;
+                border-radius: 5%;
+                margin: 25px;
+                box-shadow: 5px 5px 10px #1df7c8;
+            }
+        }
+        .contact-details {
+            .main-details {
+                p {
+                    color: aquamarine;
+                }
+            }
+          
+        }
+    }
+}

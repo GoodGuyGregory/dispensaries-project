@@ -1,0 +1,56 @@
+
+<div class="search-form-container">
+    <div class="search-form">
+        <form [formGroup]="searchForm" >
+            <h1>Product Search</h1>
+            <mat-form-field appearance="fill">
+                    <mat-label>Product Name</mat-label>
+                    <input matInput type="text" color="accent" formControlName="productName">
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+                <mat-label>Strain Name</mat-label>
+                <input matInput type="text" color="accent" formControlName="strainName">
+            </mat-form-field>
+            <div class="region-select">
+                <mat-form-field appearance="outline">
+                    <mat-select placeholder="Select Region" (valueChange)="getDispensaryBrands()" formControlName="searchRegion">
+                        <div *ngFor="let state of states">
+                            <mat-option value="{{state}}" >{{state}}</mat-option>
+                        </div>
+                    </mat-select>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-select placeholder="Select Strain Type" formControlName="strainType">
+                        <div *ngFor="let type of strainTypes">
+                            <mat-option [value]="type">
+                                {{type}}</mat-option>
+                        </div>
+                    </mat-select>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-select placeholder="Select Category" formControlName="category">
+                        <div *ngFor="let category of categories">
+                            <mat-option  value="{{category}}" >{{category}}</mat-option>
+                        </div>
+                    </mat-select>
+                </mat-form-field>
+        
+                    <mat-form-field appearance="outline" *ngIf="checkRegion()">
+                        <mat-select placeholder="Select Brand" formControlName="brand">
+                            <div *ngFor="let brand of brands">
+                                <mat-option  value="{{brand}}" >{{brand}}</mat-option>
+                            </div>
+                        </mat-select>
+                    </mat-form-field>
+                
+            </div>
+            
+            
+        </form>
+
+        <div class="actions">
+            <button mat-raised-button color="accent" [routerLink]="'/'">Back</button>
+            <button mat-raised-button color="primary" [disabled]="searchForm.invalid" (click)="searchDispensaries()">Search</button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,47 @@
+<div class="dispensaries-container">
+    <table mat-table [dataSource]="dataSource" matSort >
+        <ng-container matColumnDef="Select" >
+            <th mat-header-cell *matHeaderCellDef> Select </th>
+            <td mat-cell *matCellDef="let dispensary">
+            <mat-checkbox (click)="$event.stopPropagation()" (change)="toggleSelection(dispensary)" [checked]="selection.isSelected(dispensary)"></mat-checkbox>
+            </td>
+        </ng-container>
+        <ng-container matColumnDef="Name">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Dispensary  </th>
+          <td mat-cell *matCellDef="let dispensary"> {{dispensary.Name}} </td>
+        </ng-container>
+        <ng-container matColumnDef="Rating">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Rating </th>
+            <td mat-cell *matCellDef="let dispensary"> {{dispensary.Rating | number: '1.2-2' }} </td>
+        </ng-container>
+        <ng-container matColumnDef="Phone">
+          <th mat-header-cell *matHeaderCellDef> Phone </th>
+          <td mat-cell *matCellDef="let dispensary"> 
+            <a [ngStyle]="{ 'color': '#69f0ae' }" href="tel:{{dispensary.Phone}}">{{dispensary.Phone }}</a> </td>
+        </ng-container>
+        <ng-container matColumnDef="Address1">
+          <th mat-header-cell *matHeaderCellDef> Address </th>
+          <td mat-cell *matCellDef="let dispensary"> {{dispensary.Address1}} </td>
+        </ng-container>
+        <ng-container matColumnDef="City">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> City </th>
+          <td mat-cell *matCellDef="let dispensary"> {{dispensary.City}} </td>
+        </ng-container>
+        <ng-container matColumnDef="PostalCode">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Postal Code </th>
+          <td mat-cell *matCellDef="let dispensary"> {{dispensary.PostalCode}} </td>
+        </ng-container>
+        <ng-container matColumnDef="Region">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header=""> State </th>
+          <td mat-cell *matCellDef="let dispensary"> {{dispensary.Region}} </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayColumns;"></tr>
+    </table>
+    <mat-paginator #paginator [pageSize]="10" [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+</div>
+<div class="dispensary-actions">
+    <button mat-raised-button color="accent" routerLink="['/']">Back</button>
+    <button mat-raised-button color="primary" [disabled]="this.selection.isEmpty()" (click)="showDetails()">Show Detail</button>     
+</div>

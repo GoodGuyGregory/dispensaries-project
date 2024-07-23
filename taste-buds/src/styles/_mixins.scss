@@ -1,0 +1,10 @@
+@mixin gradient {
+    background: linear-gradient(#5c11b6, #06905c);
+}
+
+@mixin text-shadow {
+    color: white;
+    text-shadow: rgb(115, 255, 0) 1px 0 10px;
+}
+
+

@@ -1,0 +1,21 @@
+<div class="search-container">
+
+    <div class="search-bar">
+        <form [formGroup]="searchForm">
+            <mat-form-field appearance="fill">
+                <mat-label>Your Favorite Cannabis Flower</mat-label>
+                <input matInput type="text" color="accent" formControlName="searchParameter">
+            </mat-form-field>
+        </form>
+        <button mat-raised-button color="primary" [disabled]="searchForm.invalid" (click)="searchProduct()" >
+            <img src="../../../assets/icons/cannabis-solid.svg"  color="accent">
+            Search
+        </button>
+
+    </div>
+    <div class="suggest-container">
+        <button mat-stroked-button [routerLink]="['/decision-helper']" >
+            Help Me Decide
+        </button>
+    </div>
+</div>

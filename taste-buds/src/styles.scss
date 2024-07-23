@@ -1,0 +1,13 @@
+@import './styles/fonts.css';
+@import '../src/styles/mixins';
+
+
+h1   {
+    font-family: 'AkayaTelivigala', sans-serif;
+}
+
+html, body { 
+    height: 100%; 
+    @include gradient;
+}
+body { margin: 0; font-family: '', "Helvetica Neue", sans-serif; }

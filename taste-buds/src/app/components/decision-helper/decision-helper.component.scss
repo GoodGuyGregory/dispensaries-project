@@ -1,0 +1,84 @@
+@import "../../../styles/mixins";
+@import "../../../styles/variables";
+@import '../../../styles/fonts';
+
+h1, h2 {
+    @include text-shadow
+}
+
+p {
+    @include text-shadow
+}
+
+.decision-container {
+    margin: 30px 5px 0px 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+    .decision-form {
+        max-width: 190px;
+        text-align: center;
+        h1 {
+            font-size: 40px;
+        }
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        background-color: $div-background-color;
+        border-radius: 10px;
+        border: solid #f3f3f3 1px;
+        padding: 40px;
+        max-height: 750px;
+
+        .rater-slider {
+            padding: 10px;
+            align-items: center;
+        }
+
+        .form-actions {
+            button {
+                margin: 10px;
+            }
+        }
+    }   
+
+    .search-results {
+        margin: 50px;
+        
+    
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        background-color: $div-background-color;
+        border-radius: 10px;
+        border: solid #f3f3f3 1px;
+        
+        .results-table {
+            padding: 20px;
+            
+            .strain-options{
+                h1 {
+                    font-size: 45px;
+                    text-align: center;
+                }
+    
+                table {
+                    border-radius: 10px;
+                }
+            }
+
+            .strain-actions {
+                padding: 25px
+            }
+        }
+    }
+
+}
+
+
+
+

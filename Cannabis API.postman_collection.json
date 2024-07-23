@@ -1,0 +1,243 @@
+{
+	"info": {
+		"_postman_id": "6d96301d-821d-4483-aaa3-1e0538cf757a",
+		"name": "Cannabis API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5839344"
+	},
+	"item": [
+		{
+			"name": "Strains",
+			"item": [
+				{
+					"name": "Get All Types",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5003/strains/getAllTypes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5003",
+							"path": [
+								"strains",
+								"getAllTypes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Strain By Name",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Get Effects of All Strains",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Get Strains By Flavor",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5003/strains/getStrainsByFlavour/:strainFlavour",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5003",
+							"path": [
+								"strains",
+								"getStrainsByFlavour",
+								":strainFlavour"
+							],
+							"variable": [
+								{
+									"key": "strainFlavour",
+									"value": "Creative"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Strains By Effect",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5003/strains/getStrainsByFlavour/:strainFlavour",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5003",
+							"path": [
+								"strains",
+								"getStrainsByFlavour",
+								":strainFlavour"
+							],
+							"variable": [
+								{
+									"key": "strainFlavour",
+									"value": "Creative"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Flavors",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Effects",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Get Strain By Id",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Get Strains By Effect and Flavor",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"minRating\": 3,\n​   \"strainEffect\": \"Creative\",\n    \"strainFlavor\": \"Flowery\",\n​   \"strainType\": \"hybrid\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5003/strains/getStrainsByEffectFlavor/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5003",
+							"path": [
+								"strains",
+								"getStrainsByEffectFlavor",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Dispensaries",
+			"item": [
+				{
+					"name": "Get Dispensary By Id",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Get Product",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Name\": \"Strawberry Guava\",\n    \"Category\": \"Flower\",\n    \"State\": \"OH\",\n    \"StrainName\": \"hybrid\",\n    \"BrandName\": \"\",\n    \"StrainType\": \"Strawberry Guava\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5003/dispensaries/find_product_from_dispensaries?category=Edibles&name=Sunshine",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5003",
+							"path": [
+								"dispensaries",
+								"find_product_from_dispensaries"
+							],
+							"query": [
+								{
+									"key": "category",
+									"value": "Edibles"
+								},
+								{
+									"key": "brand",
+									"value": "Eastern%20Kentucky",
+									"disabled": true
+								},
+								{
+									"key": "name",
+									"value": "Sunshine"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Dispensary Categories",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Get Dispensary Regions",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Get Brands From Dispensaries",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
