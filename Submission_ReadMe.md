@@ -7,7 +7,7 @@ Determined to overcome this, I built a custom backend to parse the "[]" string a
 
 After parsing the backend for nested menu items, I addressed the common question: what should shoppers look for when visiting a dispensary, and what aspects often confuse the average customer?
 
-To answer this, I turned to Kaggle for datasets and discovered a cannabis dataset. Using part of a non-maintained API, I built my own custom version of the Cannabis API, featuring endpoints for Effects and Flavors. This allows customers to choose custom flavors and effects when deciding on a strain, reducing the overwhelming nature of the selection process.
+To answer this, I turned to Kaggle for datasets and discovered a cannabis dataset. Using part of a non-maintained API, I built my own custom version of the Cannabis API, featuring endpoints for **Effects** and **Flavors** each strain can offer. This allows customers to choose custom flavors and effects when deciding on a strain of flower or assist them when navigating edibles or vape products to be more informed about what to expect. This helps by reducing the overwhelming nature of the selection process.
 
 Once the application's search form component is filled, it returns views of all available dispensaries and products within a view component. These components allow for browsing and viewing cannabis products and their dispensary ratings. The dispensary component also enables users to call dispensaries and view contact information to ask questions or visit their sites for custom orders.
 I believe this approach helps users find what they're looking for in every strain, edible, or vape product, maximizing their taste preferences and satisfying their curiosity.
